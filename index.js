@@ -1,5 +1,13 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  for (startIndex = 0; startIndex < word.length / 2; startIndex++) {
+    let wordLastIndex = word.length - 1;
+    let endIndex = wordLastIndex - startIndex;
+    if (word[startIndex] !== word[endIndex]) {
+      return false;
+    }
+  }
+  return true;
 }
 
 /* 
@@ -8,6 +16,11 @@ function isPalindrome(word) {
 
 /*
   Add written explanation of your solution here
+   1.loop through character in string working our way from the start and end points of the string towards the center of the string.
+  2.  loop proceeds until the start and end points of the string ,
+  returns true when loop reaches center of string 
+  3.  loop stops and returns false if the start index and end index are not equal
+   
 */
 
 // You can run `node index.js` to view these console logs
